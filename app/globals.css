@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAFC;
+  --background-secondary: #FFFFFF;
+  --foreground: #0F172A;
+  --foreground-muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(226, 232, 240, 0.85);
+  --accent-teal: #0D9488;
+  --accent-indigo: #4F46E5;
+  --grid-pattern: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: #07090E;
+  --background-secondary: #0F141C;
+  --foreground: #F8FAFC;
+  --foreground-muted: #94A3B8;
+  --card-bg: rgba(15, 20, 28, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --accent-teal: #14B8A6;
+  --accent-indigo: #6366F1;
+  --grid-pattern: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Background Subtle Grid Pattern */
+.bg-grid-dots {
+  background-size: 28px 28px;
+  background-image: var(--grid-pattern);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 184, 166, 0.5);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

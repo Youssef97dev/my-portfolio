@@ -1,0 +1,54 @@
+Act as an elite Creative Developer, UI/UX Designer, and Full-Stack Next.js Architect. Your task is to build a unique, high-converting, and visually stunning Full-Stack Developer Portfolio website from scratch (or within the current workspace) using **Next.js (App Router), TypeScript, and Tailwind CSS**.
+
+### 1. CONTENT & DATA EXTRACTION (CRITICAL FIRST STEP)
+- **CV Source:** Before writing any UI code, inspect the project directory (check the root, `/file`, `/files`, `/public`, or `/assets` folders) to locate my CV document. 
+- Extract all relevant personal information, professional summary, technical skills, work experience, education, and contact/social links from the CV.
+- Centralize all extracted CV data and portfolio content into a single, strongly-typed configuration file (`src/data/portfolio-data.ts`) so it is decoupled from the UI components and easy to maintain.
+- **Projects (Placeholders):** In `src/data/portfolio-data.ts`, create a `projects` array with **4 to 6 well-structured placeholder projects**. Include fields for: `id`, `title`, `description`, `techStack` (array of strings), `image` (use high-quality Unsplash tech/abstract URLs or clean SVG placeholders), `liveUrl`, `githubUrl`, and `featured` (boolean). Add clear code comments showing where I can manually edit them later.
+
+### 2. COLOR PALETTE & THEME SYSTEM (DARK / LIGHT MODE)
+Implement a seamless Dark/Light mode toggle using `next-themes` (defaulting to Dark Mode) with smooth color transitions. Use the following "Cinematic Tech" palette via CSS variables and Tailwind:
+- **Dark Mode (Obsidian & Electric Teal):**
+  - Background Primary: `#07090E` (Deep Obsidian)
+  - Background Secondary / Cards: `#0F141C` with subtle glassmorphism (`backdrop-blur-md bg-white/[0.03] border border-white/[0.08]`)
+  - Text Primary: `#F8FAFC` (Crisp White)
+  - Text Secondary / Muted: `#94A3B8` (Slate Gray)
+  - Accent Primary: `#14B8A6` (Electric Teal) to `#10B981` (Emerald) gradients
+  - Accent Secondary: `#6366F1` (Indigo glow for subtle background ambient lighting)
+- **Light Mode (Alabaster & Deep Slate):**
+  - Background Primary: `#F8FAFC` (Crisp Alabaster)
+  - Background Secondary / Cards: `#FFFFFF` with subtle borders (`border-slate-200/80 shadow-sm`)
+  - Text Primary: `#0F172A` (Deep Slate)
+  - Text Secondary / Muted: `#475569` (Cool Gray)
+  - Accent Primary: `#0D9488` (Deep Teal) & `#4F46E5` (Royal Indigo)
+
+### 3. 3D ELEMENTS & INTERACTIVE ANIMATIONS
+Combine **Framer Motion** for layout/scroll animations and **Three.js (`@react-three/fiber` and `@react-three/drei`)** for interactive 3D elements:
+- **3D Hero Scene:** Create a lightweight, high-FPS interactive 3D canvas in the Hero section (e.g., an abstract wireframe icosahedron/torus knot, a floating interactive geometric node network, or a shader-driven morphing sphere) that subtly reacts to mouse movement and adapts its material/wireframe color when switching between Dark and Light mode.
+- **3D Tilt Cards:** Apply a subtle 3D perspective tilt effect (with a dynamic radial cursor spotlight/glare effect) on the Project cards and Bento grid items on mouse hover.
+- **Micro-Interactions & Scroll Physics:**
+  - Staggered text reveal animations for headings.
+  - Magnetic hover effects on primary buttons, social links, and the theme toggle.
+  - Smooth scroll-triggered fade-up and scale animations for each section using Framer Motion `whileInView`.
+
+### 4. LAYOUT & SECTIONS ARCHITECTURE
+Build a modern, non-generic layout featuring subtle background grid/dot patterns and ambient radial glows:
+1. **Floating Glassmorphic Navbar:** Sticky top navigation with smooth anchor links, a status badge ("Available for opportunities" with a pulsing green dot), and the Dark/Light mode toggle with an animated sun/moon icon.
+2. **Hero Section:** Split or layered layout with my name, title, and a punchy value proposition derived from my CV, CTAs ("View Projects", "Download CV", "Contact Me"), and the interactive 3D Three.js element.
+3. **Bento Grid "About & Tech Stack" Section:** A modern Bento-style grid showcasing my core stack (Frontend, Backend, Databases, DevOps/Tools categorized cleanly from my CV), years of experience, location, and core engineering strengths.
+4. **Interactive Experience & Education Timeline:** A vertical animated timeline with a glowing scroll-progress beam that highlights my career and academic milestones from my CV.
+5. **Featured Projects Showcase (Placeholder Ready):** Filterable or showcased grid of 3D interactive cards displaying the placeholder projects, complete with tech stack pills, live demo links, and GitHub links.
+6. **Contact & Footer Section:** Clean contact section with a working UI form, one-click "Copy Email" button with toast feedback, social links from my CV, and a sleek footer.
+
+### 5. TECHNICAL & PERFORMANCE REQUIREMENTS
+- Ensure 100% responsiveness across mobile, tablet, and desktop viewports.
+- Lazy-load the 3D canvas (`next/dynamic` with `ssr: false`) and provide a sleek fallback loader so Core Web Vitals and initial page load speed remain blazingly fast.
+- Use `lucide-react` for crisp iconography and clean typography (`Geist`, `Inter`, or `Space Grotesk` via `next/font/google`).
+- Write clean, modular, TypeScript-strict code with zero console or build errors.
+
+### EXECUTION STEPS:
+1. Search the workspace to find and read my CV file.
+2. Install required dependencies (`framer-motion`, `three`, `@types/three`, `@react-three/fiber`, `@react-three/drei`, `next-themes`, `lucide-react`, `clsx`, `tailwind-merge`).
+3. Create `src/data/portfolio-data.ts` populated with my real CV data + the placeholder projects.
+4. Build the theme provider, 3D components, UI sections, and assemble the main page.
+5. Verify that the project builds cleanly and starts without errors.
