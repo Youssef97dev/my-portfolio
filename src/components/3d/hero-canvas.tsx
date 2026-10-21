@@ -154,7 +154,7 @@ export default function HeroCanvas() {
   const isDark = resolvedTheme !== "light";
 
   return (
-    <div className="relative w-full h-[420px] sm:h-[500px] lg:h-[560px] flex items-center justify-center select-none">
+    <div className="relative w-full h-[360px] sm:h-[500px] lg:h-[560px] flex items-center justify-center select-none" style={{ touchAction: "pan-y" }}>
       {/* Ambient Radial Core Light */}
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-40 dark:opacity-60 blur-[100px] transition-colors duration-700"
@@ -170,6 +170,7 @@ export default function HeroCanvas() {
         gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
         dpr={[1, 1.5]}
         className="z-10 cursor-grab active:cursor-grabbing"
+        style={{ touchAction: "pan-y" }}
       >
         <ambientLight intensity={isDark ? 0.8 : 1.3} />
         <directionalLight position={[6, 6, 6]} intensity={isDark ? 1.8 : 2.2} color="#FFFFFF" />

@@ -24,9 +24,9 @@ export function ProjectsSection() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden w-full max-w-full">
       {/* Background radial glows */}
-      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal-500/10 blur-[150px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] max-w-[80vw] h-[600px] bg-teal-500/10 blur-[150px] rounded-full" />
 
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}

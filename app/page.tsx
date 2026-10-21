@@ -7,12 +7,12 @@ import { ContactSection } from "@/components/contact-section";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col selection:bg-teal-500/20 selection:text-teal-400">
+    <div className="relative min-h-screen flex flex-col selection:bg-teal-500/20 selection:text-teal-400 overflow-x-hidden w-full max-w-full">
       {/* Top Floating Glassmorphic Navbar */}
       <Navbar />
 
       {/* Main Content Sections */}
-      <main className="flex-1 flex flex-col w-full">
+      <main className="flex-1 flex flex-col w-full max-w-full overflow-x-hidden">
         <HeroSection />
         <BentoSection />
         <TimelineSection />

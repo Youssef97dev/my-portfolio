@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function CanvasLoader() {
   return (
-    <div className="relative w-full h-[380px] sm:h-[460px] lg:h-[540px] flex items-center justify-center">
+    <div className="relative w-full h-[360px] sm:h-[500px] lg:h-[560px] flex items-center justify-center">
       {/* Background glow placeholder */}
       <div className="absolute inset-0 bg-radial from-teal-500/10 dark:from-teal-400/10 via-indigo-500/5 to-transparent blur-3xl animate-pulse" />
       

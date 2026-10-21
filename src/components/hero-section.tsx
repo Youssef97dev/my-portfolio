@@ -42,36 +42,36 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-between pt-28 sm:pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-between pt-24 sm:pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden w-full max-w-full"
     >
       {/* Cinematic Ambient Background Lights */}
-      <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-gradient-to-b from-teal-500/20 via-indigo-500/15 to-transparent blur-[140px] rounded-full -z-10" />
-      <div className="pointer-events-none absolute top-1/3 -left-32 w-[450px] h-[450px] bg-teal-500/15 blur-[120px] rounded-full -z-10" />
-      <div className="pointer-events-none absolute top-1/2 -right-32 w-[500px] h-[500px] bg-indigo-500/15 blur-[130px] rounded-full -z-10" />
+      <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[850px] max-w-[100vw] h-[550px] bg-gradient-to-b from-teal-500/20 via-indigo-500/15 to-transparent blur-[140px] rounded-full -z-10" />
+      <div className="pointer-events-none absolute top-1/3 -left-32 w-[450px] max-w-[80vw] h-[450px] bg-teal-500/15 blur-[120px] rounded-full -z-10" />
+      <div className="pointer-events-none absolute top-1/2 -right-32 w-[500px] max-w-[80vw] h-[500px] bg-indigo-500/15 blur-[130px] rounded-full -z-10" />
 
       {/* Main Grid Container */}
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center my-auto relative z-10">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center my-auto relative z-10">
         
         {/* Left Column: Editorial Headline, Bio, & Action Hub */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left">
+        <div className="lg:col-span-7 flex flex-col items-start text-left w-full">
           
           {/* Status & Availability Capsule */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/5 dark:bg-white/[0.05] border border-slate-300/80 dark:border-white/10 backdrop-blur-xl mb-6 shadow-sm"
+            className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1.5 px-3.5 py-1.5 rounded-2xl sm:rounded-full bg-slate-900/5 dark:bg-white/[0.05] border border-slate-300/80 dark:border-white/10 backdrop-blur-xl mb-6 shadow-sm max-w-full"
           >
-            <span className="relative flex h-2.5 w-2.5">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-800 dark:text-slate-200">
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-slate-800 dark:text-slate-200">
               Disponible pour opportunités
             </span>
-            <span className="text-slate-400 dark:text-slate-600">•</span>
-            <span className="text-[11px] font-mono text-slate-600 dark:text-slate-400 flex items-center gap-1">
-              <MapPin className="w-3 h-3 text-teal-500" />
+            <span className="hidden sm:inline text-slate-400 dark:text-slate-600">•</span>
+            <span className="text-[10px] sm:text-[11px] font-mono text-slate-600 dark:text-slate-400 flex items-center gap-1">
+              <MapPin className="w-3 h-3 text-teal-500 shrink-0" />
               Casablanca • Remote
             </span>
           </motion.div>
@@ -83,7 +83,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-center gap-2 text-xs sm:text-sm font-mono uppercase tracking-widest text-teal-600 dark:text-teal-400 font-semibold mb-3"
           >
-            <Terminal className="w-4 h-4" />
+            <Terminal className="w-4 h-4 shrink-0" />
             <span>Full-Stack Software Engineer & Architect</span>
           </motion.div>
 
@@ -92,7 +92,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-4xl sm:text-6xl xl:text-7xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.05] mb-5"
+            className="text-3xl sm:text-6xl xl:text-7xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.08] mb-5 break-words max-w-full"
           >
             Bâtir des architectures web{" "}
             <span className="relative inline-block">
@@ -107,7 +107,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8 font-normal"
+            className="text-sm sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-8 font-normal"
           >
             Moi c&apos;est <strong className="text-slate-900 dark:text-white font-semibold">{personal.name}</strong>. 
             Avec <span className="text-teal-600 dark:text-teal-400 font-semibold">5+ années d&apos;expertise</span>, je conçois et déploie des applications web complètes — de la modélisation de bases de données hautement optimisées (<strong>PostgreSQL</strong>, <strong>MongoDB</strong>) et d&apos;APIs sécurisées (<strong>NestJS</strong>, <strong>Node.js</strong>) aux interfaces immersives ultra-fluides (<strong>React 19</strong>, <strong>Next.js App Router</strong>).
@@ -118,12 +118,12 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="flex flex-wrap items-center gap-3.5 mb-8 w-full"
+            className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-3.5 mb-8 w-full"
           >
-            <Magnetic strength={0.25}>
+            <Magnetic strength={0.2} className="w-full sm:w-auto">
               <a
                 href="#projects"
-                className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-teal-500 via-teal-600 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 shadow-xl shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 transition-all duration-200 overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-teal-500 via-teal-600 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 shadow-xl shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 transition-all duration-200 overflow-hidden w-full sm:w-auto"
               >
                 <Layers className="w-4 h-4" />
                 <span>Explorer les projets</span>
@@ -131,23 +131,23 @@ export function HeroSection() {
               </a>
             </Magnetic>
 
-            <Magnetic strength={0.25}>
+            <Magnetic strength={0.2} className="w-full sm:w-auto">
               <a
                 href={personal.cvPath}
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-white/[0.06] border border-slate-300 dark:border-white/15 hover:border-teal-500 hover:bg-slate-50 dark:hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 shadow-sm backdrop-blur-md"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-800 dark:text-slate-200 bg-white/90 dark:bg-white/[0.06] border border-slate-300 dark:border-white/15 hover:border-teal-500 hover:bg-slate-50 dark:hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 shadow-sm backdrop-blur-md w-full sm:w-auto"
               >
                 <Download className="w-4 h-4 text-teal-500" />
                 <span>Télécharger le CV (PDF)</span>
               </a>
             </Magnetic>
 
-            <Magnetic strength={0.25}>
+            <Magnetic strength={0.2} className="w-full sm:w-auto">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-white/5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl font-semibold text-sm text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-slate-100/80 dark:hover:bg-white/5 transition-all duration-200 w-full sm:w-auto"
               >
                 <Mail className="w-4 h-4" />
                 <span>Me contacter</span>
@@ -325,7 +325,7 @@ export function HeroSection() {
       </div>
 
       {/* Key Metrics Counter Bar */}
-      <div className="w-full max-w-7xl mx-auto pt-6 border-t border-slate-200/80 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="w-full max-w-7xl mx-auto pt-6 border-t border-slate-200/80 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
         {metrics.map((m, idx) => (
           <motion.div
             key={m.label}
@@ -333,7 +333,7 @@ export function HeroSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1, duration: 0.4 }}
-            className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#0F141C]/70 border border-slate-200/80 dark:border-white/[0.07] backdrop-blur-xl shadow-sm flex flex-col"
+            className="p-3.5 sm:p-5 rounded-2xl bg-white/70 dark:bg-[#0F141C]/70 border border-slate-200/80 dark:border-white/[0.07] backdrop-blur-xl shadow-sm flex flex-col"
           >
             <span className="text-2xl sm:text-3xl font-black font-mono bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text text-transparent">
               {m.value}

@@ -56,7 +56,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative pt-20 sm:pt-24 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden w-full max-w-full">
       {/* Background radial glow */}
       <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-teal-500/10 blur-[140px] rounded-full" />
 
@@ -225,7 +225,7 @@ export function ContactSection() {
             viewport={{ once: true }}
             className="lg:col-span-7"
           >
-            <div className="p-7 sm:p-9 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-xl">
+            <div className="p-5 sm:p-9 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-xl">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                 Envoyer un message direct
               </h3>

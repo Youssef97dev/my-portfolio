@@ -21,10 +21,10 @@ export function BentoSection() {
   const [activeTab, setActiveTab] = useState<string>("Front-End");
 
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden w-full max-w-full">
       {/* Background radial accents */}
-      <div className="pointer-events-none absolute top-1/2 left-0 w-96 h-96 bg-teal-500/10 blur-[130px] rounded-full" />
-      <div className="pointer-events-none absolute bottom-10 right-0 w-96 h-96 bg-indigo-500/10 blur-[130px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 left-0 w-96 max-w-[80vw] h-96 bg-teal-500/10 blur-[130px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-10 right-0 w-96 max-w-[80vw] h-96 bg-indigo-500/10 blur-[130px] rounded-full" />
 
       <div className="w-full max-w-7xl mx-auto">
         {/* Section Header */}
@@ -110,11 +110,11 @@ export function BentoSection() {
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+              <div className="pt-6 mt-6 border-t border-slate-200/80 dark:border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
                 <span className="flex items-center gap-1.5 text-teal-600 dark:text-teal-400 font-medium">
-                  <Zap className="w-3.5 h-3.5" /> Code maintenable & modulaire
+                  <Zap className="w-3.5 h-3.5 shrink-0" /> Code maintenable & modulaire
                 </span>
-                <span>Next.js App Router • NestJS • PostgreSQL</span>
+                <span className="text-[11px] sm:text-xs">Next.js App Router • NestJS • PostgreSQL</span>
               </div>
             </TiltCard>
           </motion.div>
@@ -180,8 +180,8 @@ export function BentoSection() {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                <span>Catégorie sélectionnée : <strong className="text-slate-900 dark:text-white">{activeTab}</strong></span>
+              <div className="pt-4 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+                <span>Catégorie : <strong className="text-slate-900 dark:text-white">{activeTab}</strong></span>
                 <span>{skillCategories[activeTab]?.length || 0} compétences</span>
               </div>
             </TiltCard>

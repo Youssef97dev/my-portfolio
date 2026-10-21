@@ -31,10 +31,10 @@ export function TimelineSection() {
   });
 
   return (
-    <section id="experience" ref={containerRef} className="relative py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" ref={containerRef} className="relative py-20 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden w-full max-w-full">
       {/* Background ambient lighting */}
-      <div className="pointer-events-none absolute top-1/3 right-10 w-96 h-96 bg-teal-500/10 blur-[140px] rounded-full" />
-      <div className="pointer-events-none absolute bottom-10 left-10 w-96 h-96 bg-indigo-500/10 blur-[140px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/3 right-10 w-96 max-w-[80vw] h-96 bg-teal-500/10 blur-[140px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-10 left-10 w-96 max-w-[80vw] h-96 bg-indigo-500/10 blur-[140px] rounded-full" />
 
       <div className="w-full max-w-5xl mx-auto">
         {/* Section Header */}
@@ -74,30 +74,30 @@ export function TimelineSection() {
           </motion.p>
 
           {/* Toggle Experience vs Education */}
-          <div className="flex items-center justify-center gap-2 mt-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 mt-8 w-full max-w-lg mx-auto">
             <button
               type="button"
               onClick={() => setActiveTab("experience")}
-              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "experience"
                   ? "bg-gradient-to-r from-teal-500 to-emerald-600 text-white shadow-lg shadow-teal-500/25"
                   : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/10"
               }`}
             >
-              <Briefcase className="w-4 h-4" />
-              Expériences Professionnelles ({experiences.length})
+              <Briefcase className="w-4 h-4 shrink-0" />
+              <span>Expériences Professionnelles ({experiences.length})</span>
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("education")}
-              className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === "education"
                   ? "bg-gradient-to-r from-teal-500 to-indigo-600 text-white shadow-lg shadow-indigo-500/25"
                   : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/10"
               }`}
             >
-              <GraduationCap className="w-4 h-4" />
-              Diplômes & Études ({education.length})
+              <GraduationCap className="w-4 h-4 shrink-0" />
+              <span>Diplômes & Études ({education.length})</span>
             </button>
           </div>
         </div>
@@ -131,7 +131,7 @@ export function TimelineSection() {
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-lg transition-all hover:border-teal-500/40">
+                  <div className="p-4 sm:p-7 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-lg transition-all hover:border-teal-500/40">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                       <div>
                         <div className="flex items-center gap-2">
@@ -227,7 +227,7 @@ export function TimelineSection() {
                     <span className="w-2 h-2 rounded-full bg-indigo-500" />
                   </div>
 
-                  <div className="p-6 sm:p-7 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-lg transition-all hover:border-indigo-500/40">
+                  <div className="p-4 sm:p-7 rounded-2xl bg-white/90 dark:bg-[#0F141C]/85 border border-slate-200/90 dark:border-white/[0.08] backdrop-blur-xl shadow-lg transition-all hover:border-indigo-500/40">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <div className="max-w-xl">
                         <h3 className="text-lg font-bold text-slate-900 dark:text-white">
