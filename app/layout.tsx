@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Youssef Moussafi — Développeur Full Stack | Next.js • NestJS • PostgreSQL",
+  title:
+    "Youssef Moussafi — Développeur Full Stack | Next.js • NestJS • PostgreSQL",
   description:
     "Portfolio de Youssef Moussafi, Développeur Full Stack avec plus de 5 ans d'expérience dans la conception d'applications web modernes (React.js, Next.js, Node.js, NestJS, PostgreSQL).",
   keywords: [
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     "TypeScript",
     "PostgreSQL",
     "Casablanca",
-    "Maroc"
+    "Maroc",
   ],
   authors: [{ name: "Youssef Moussafi" }],
   openGraph: {
@@ -43,8 +45,8 @@ export const metadata: Metadata = {
     url: "https://youssefmoussafi.vercel.app",
     siteName: "Youssef Moussafi Portfolio",
     locale: "fr_FR",
-    type: "website"
-  }
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -58,7 +60,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[var(--background)] text-[var(--foreground)] bg-grid-dots">
+      <Analytics />
+      <body className="min-h-full flex flex-col font-sans bg-(--background) text-(--foreground) bg-grid-dots">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
