@@ -56,7 +56,11 @@ export interface PortfolioData {
     yearsOfExperience: string;
     about: string;
     bioPoints: string[];
-    languages: { language: string; proficiency: string; levelPercent: number }[];
+    languages: {
+      language: string;
+      proficiency: string;
+      levelPercent: number;
+    }[];
   };
   metrics: {
     label: string;
@@ -93,20 +97,48 @@ export const portfolioData: PortfolioData = {
       "Conception d'APIs RESTful ultra-performantes et sécurisées (NestJS, Node.js, JWT)",
       "Optimisation de bases de données relationnelles & NoSQL (PostgreSQL, MongoDB)",
       "Culture DevOps complète : CI/CD, PM2, Vercel, monitoring & haute disponibilité",
-      "Sens aiguisé du design UI/UX, accessibilité et Core Web Vitals < 100ms"
+      "Sens aiguisé du design UI/UX, accessibilité et Core Web Vitals < 100ms",
     ],
     languages: [
-      { language: "Arabe", proficiency: "Langue maternelle", levelPercent: 100 },
-      { language: "Français", proficiency: "Courant (Professionnel)", levelPercent: 95 },
-      { language: "Anglais", proficiency: "Intermédiaire (Technique)", levelPercent: 75 }
-    ]
+      {
+        language: "Arabe",
+        proficiency: "Langue maternelle",
+        levelPercent: 100,
+      },
+      {
+        language: "Français",
+        proficiency: "Courant (Professionnel)",
+        levelPercent: 95,
+      },
+      {
+        language: "Anglais",
+        proficiency: "Intermédiaire (Technique)",
+        levelPercent: 75,
+      },
+    ],
   },
 
   metrics: [
-    { label: "Années d'expérience", value: "5+", description: "Sur des projets web & API exigeants" },
-    { label: "Projets livrés", value: "20+", description: "Applications métiers, SaaS et vitrines" },
-    { label: "Performances Core Web", value: "99+", description: "Optimisations SEO, FCP & LCP" },
-    { label: "Disponibilité", value: "100%", description: "À l'écoute de nouveaux défis et opportunités" }
+    {
+      label: "Années d'expérience",
+      value: "5+",
+      description: "Sur des projets web & API exigeants",
+    },
+    {
+      label: "Projets livrés",
+      value: "20+",
+      description: "Applications métiers, SaaS et vitrines",
+    },
+    {
+      label: "Performances Core Web",
+      value: "99+",
+      description: "Optimisations SEO, FCP & LCP",
+    },
+    {
+      label: "Disponibilité",
+      value: "100%",
+      description: "À l'écoute de nouveaux défis et opportunités",
+    },
   ],
 
   skillCategories: {
@@ -118,7 +150,7 @@ export const portfolioData: PortfolioData = {
       "Tailwind CSS",
       "HTML5",
       "CSS3",
-      "Framer Motion"
+      "Framer Motion",
     ],
     "Back-End & API": [
       "Node.js",
@@ -126,19 +158,19 @@ export const portfolioData: PortfolioData = {
       "Express.js",
       "Architecture RESTful",
       "Authentification JWT",
-      "Microservices"
+      "Microservices",
     ],
     "Bases de données": [
       "PostgreSQL",
       "MongoDB",
       "Modélisation relationnelle & NoSQL",
       "Indexation & Optimisation de requêtes",
-      "Prisma / TypeORM"
+      "Prisma / TypeORM",
     ],
     "IA & Productivité": [
       "Développement assisté par IA",
       "Intégration d'API IA (LLM, Embeddings)",
-      "Automatisation de workflows"
+      "Automatisation de workflows",
     ],
     "Déploiement & Outils": [
       "Git & GitHub",
@@ -148,15 +180,15 @@ export const portfolioData: PortfolioData = {
       "Postman",
       "NPM",
       "VS Code",
-      "Trello (Agile/Scrum)"
+      "Trello (Agile/Scrum)",
     ],
     "Performance & Méthodes": [
       "SEO Technique",
       "Core Web Vitals",
       "Lazy Loading & Infinite Scroll",
       "Agile / Scrum",
-      "Modélisation UML & Merise"
-    ]
+      "Modélisation UML & Merise",
+    ],
   },
 
   skillsDetail: [
@@ -167,8 +199,8 @@ export const portfolioData: PortfolioData = {
         { name: "React.js", level: 95 },
         { name: "TypeScript", level: 90 },
         { name: "Tailwind CSS", level: 95 },
-        { name: "Framer Motion & 3D", level: 85 }
-      ]
+        { name: "Framer Motion & 3D", level: 85 },
+      ],
     },
     {
       title: "Back-End & Architecture",
@@ -177,8 +209,8 @@ export const portfolioData: PortfolioData = {
         { name: "Express.js", level: 88 },
         { name: "REST APIs & JWT", level: 95 },
         { name: "PostgreSQL & SQL", level: 90 },
-        { name: "MongoDB & NoSQL", level: 85 }
-      ]
+        { name: "MongoDB & NoSQL", level: 85 },
+      ],
     },
     {
       title: "DevOps & Écosystème",
@@ -186,9 +218,9 @@ export const portfolioData: PortfolioData = {
         { name: "Vercel & PM2", level: 90 },
         { name: "Git & Workflows", level: 92 },
         { name: "SEO & Core Web Vitals", level: 95 },
-        { name: "AI Dev Workflows", level: 90 }
-      ]
-    }
+        { name: "AI Dev Workflows", level: 90 },
+      ],
+    },
   ],
 
   experiences: [
@@ -201,7 +233,7 @@ export const portfolioData: PortfolioData = {
       type: "Poste actuel",
       description: [
         "Conception architecturale et réalisation full-stack de solutions web à haute valeur ajoutée.",
-        "Mise en place de systèmes de réservation critiques et vitrines pour divers établissements haut de gamme."
+        "Mise en place de systèmes de réservation critiques et vitrines pour divers établissements haut de gamme.",
       ],
       projects: [
         {
@@ -210,8 +242,8 @@ export const portfolioData: PortfolioData = {
             "Conçu et modélisé la structure relationnelle PostgreSQL pour le système de gestion des réservations en temps réel.",
             "Développé l'architecture complète Back-End (NestJS) et Front-End (Next.js).",
             "Implémenté des API REST sécurisées avec authentification JWT et gestion granulaire des rôles.",
-            "Déployé sur serveur Namecheap via Node.js avec PM2 en cluster pour garantir haute disponibilité et zéro interruption."
-          ]
+            "Déployé sur serveur Namecheap via Node.js avec PM2 en cluster pour garantir haute disponibilité et zéro interruption.",
+          ],
         },
         {
           name: "Conception de 5 sites web de présentation pour établissements",
@@ -219,11 +251,21 @@ export const portfolioData: PortfolioData = {
             "Conçu et développé 5 sites sur-mesure (Next.js / Tailwind CSS) respectant l'identité visuelle de chaque marque.",
             "Intégration de contenus dynamiques (menus interactifs, galeries médias, événements) avec UX desktop/mobile fluide.",
             "Optimisation SEO technique et Core Web Vitals (scores 98+) propulsant la visibilité en ligne.",
-            "Maintenance évolutive, monitoring de production et support technique continu."
-          ]
-        }
+            "Maintenance évolutive, monitoring de production et support technique continu.",
+          ],
+        },
       ],
-      techStack: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL", "REST API", "JWT", "PM2", "Vercel"]
+      techStack: [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "REST API",
+        "JWT",
+        "PM2",
+        "Vercel",
+      ],
     },
     {
       id: "votresalle",
@@ -233,7 +275,7 @@ export const portfolioData: PortfolioData = {
       period: "Octobre 2023 – Août 2024",
       type: "Expérience clé",
       description: [
-        "Développement de la plateforme nationale votresalles.ma pour la publication, la recherche et la réservation de salles au Maroc."
+        "Développement de la plateforme nationale votresalles.ma pour la publication, la recherche et la réservation de salles au Maroc.",
       ],
       projects: [
         {
@@ -243,11 +285,20 @@ export const portfolioData: PortfolioData = {
             "Développement full-stack complet : backend NestJS modulaire et interface Next.js ultra-réactive avec Tailwind CSS.",
             "Implémentation de JWT pour la sécurité des comptes hôtes et clients.",
             "Optimisation des performances : Infinite Scroll, Lazy Loading et requêtes PostgreSQL indexées.",
-            "Déploiement Namecheap avec PM2 et supervision continue du service."
-          ]
-        }
+            "Déploiement Namecheap avec PM2 et supervision continue du service.",
+          ],
+        },
       ],
-      techStack: ["Next.js", "NestJS", "Tailwind CSS", "PostgreSQL", "REST API", "JWT", "PM2", "Namecheap"]
+      techStack: [
+        "Next.js",
+        "NestJS",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "REST API",
+        "JWT",
+        "PM2",
+        "Namecheap",
+      ],
     },
     {
       id: "eam-service",
@@ -257,51 +308,62 @@ export const portfolioData: PortfolioData = {
       period: "Octobre 2020 – Février 2023",
       type: "Expérience fondatrice",
       description: [
-        "Conception et développement de deux applications web internes stratégiques pour l'exploitation d'entreprise."
+        "Conception et développement de deux applications web internes stratégiques pour l'exploitation d'entreprise.",
       ],
       projects: [
         {
           name: "Application web de Gestion des Achats",
           details: [
             "Gestion des fournisseurs, catalogue produits, commandes d'approvisionnement et suivi d'inventaire en temps réel.",
-            "Architecture Node.js / Express.js avec stockage MongoDB optimisé."
-          ]
+            "Architecture Node.js / Express.js avec stockage MongoDB optimisé.",
+          ],
         },
         {
           name: "Application web de Gestion des Ouvriers",
           details: [
             "Gestion des effectifs, suivi des congés, coffre-fort documentaire et planification des chantiers.",
             "Authentification sécurisée JWT avec contrôle d'accès basé sur les rôles (RBAC).",
-            "Interface React.js dynamique avec retours utilisateurs en temps réel et support technique."
-          ]
-        }
+            "Interface React.js dynamique avec retours utilisateurs en temps réel et support technique.",
+          ],
+        },
       ],
-      techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JWT", "Git"]
-    }
+      techStack: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST API",
+        "JWT",
+        "Git",
+      ],
+    },
   ],
 
   education: [
     {
       id: "master",
-      degree: "Master Universitaire Professionnel — Ingénierie de Conception et de Développement d'Applications",
+      degree:
+        "Master Universitaire Professionnel — Ingénierie de Conception et de Développement d'Applications",
       institution: "Faculté des Sciences et Techniques (FST)",
       location: "Casablanca, Maroc",
-      period: "Octobre 2022 – Juin 2023"
+      period: "Octobre 2022 – Juin 2023",
     },
     {
       id: "licence",
-      degree: "Licence Professionnelle — Méthodes Informatiques Appliquées à la Gestion des Entreprises (MIAGE)",
-      institution: "Faculté des Sciences Juridiques, Économiques et Sociales (FSJES)",
+      degree:
+        "Licence Professionnelle — Méthodes Informatiques Appliquées à la Gestion des Entreprises (MIAGE)",
+      institution:
+        "Faculté des Sciences Juridiques, Économiques et Sociales (FSJES)",
       location: "Mohammedia, Maroc",
-      period: "Octobre 2018 – Juin 2019"
+      period: "Octobre 2018 – Juin 2019",
     },
     {
       id: "tsdi",
       degree: "Diplôme de Technicien Spécialisé en Développement Informatique",
       institution: "Institut Spécialisé de Gestion et d'Informatique (ISGI)",
       location: "Casablanca, Maroc",
-      period: "Octobre 2015 – Juin 2017"
-    }
+      period: "Octobre 2015 – Juin 2017",
+    },
   ],
 
   // -------------------------------------------------------------------------------------------------
@@ -316,82 +378,103 @@ export const portfolioData: PortfolioData = {
         "Plateforme web de recherche, publication et réservation événementielle au Maroc avec moteur de recherche géolocalisé et gestion de créneaux en direct.",
       longDescription:
         "Conception complète de la marketplace avec filtres multicritères, paiement sécurisé, tableau de bord pour hôtes et calendrier interactif synchronisé.",
-      techStack: ["Next.js", "NestJS", "PostgreSQL", "Tailwind CSS", "JWT", "PM2"],
-      image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://votresalles.ma",
-      githubUrl: "https://github.com/youssefmoussafi/votresalle-platform",
+      techStack: [
+        "Next.js",
+        "NestJS",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "JWT",
+        "PM2",
+      ],
+      image: "/images/votresalle-image.PNG",
+      liveUrl: "https://votre-salle-v2.vercel.app/",
+      githubUrl: "https://github.com/Youssef97dev/votre_salle_V2",
       featured: true,
-      category: "Full-Stack"
+      category: "Full-Stack",
     },
     {
-      id: "creativa-reserve-system",
-      title: "Creativa — Booking & Table Management",
+      id: "le-salama-restaurant",
+      title: "Le Salama Marrakech - Restaurant",
       description:
-        "Système SaaS de réservation et assignation de tables en temps réel avec notifications automatisées et tableau de bord analytics pour restaurateurs.",
+        "A vibrant, responsive web platform for an iconic Marrakech rooftop restaurant and sky bar.",
       longDescription:
-        "Application dédiée aux établissements de restauration avec plan de salle interactif en direct, gestion des flux clients et intégration API SMS/WhatsApp.",
-      techStack: ["Next.js 14", "NestJS", "PostgreSQL", "Tailwind CSS", "WebSockets"],
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://creativa-restaurant.vercel.app",
-      githubUrl: "https://github.com/youssefmoussafi/creativa-booking",
+        "Developed the official website for Le Salama Marrakech using Next.js, React, and Node.js. The project focuses on capturing the venue's colonial-chic atmosphere and panoramic rooftop views through high-resolution visual storytelling, smooth page transitions, and fast load times. Built with a mobile-first approach, it features intuitive menu browsing, direct table reservation flows, and SEO optimization to attract international visitors.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/lesalama-image.PNG",
+      liveUrl: "https://lesalamamarrakech.com/",
+      githubUrl: "https://github.com/Youssef97dev/lesalama-v23",
       featured: true,
-      category: "Full-Stack"
+      category: "Frontend",
     },
     {
-      id: "smart-erp-procurement",
-      title: "FlowProcure — ERP Achats & Stocks",
+      id: "le-palace-restaurant",
+      title: "Le Palace Marrakech - Restaurant",
       description:
-        "Solution d'approvisionnement d'entreprise pour la traçabilité des stocks, commandes fournisseurs et validation budgétaire hiérarchique.",
+        "An upscale, high-performance website for a luxury fine-dining restaurant and lounge in Hivernage.",
       longDescription:
-        "Module ERP interne conçu pour standardiser les flux d'achats avec historique d'audit, alertes de rupture de stock et génération de bons de commande PDF.",
-      techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://flowprocure-demo.vercel.app",
-      githubUrl: "https://github.com/youssefmoussafi/flowprocure-erp",
+        "Engineered a refined digital experience for Le Palace Marrakech with Next.js and React. Designed to reflect the venue's glamorous dining and nightlife ambiance, the site pairs dark, elegant typography with optimized media delivery. Key implementations include server-side rendering for strong search visibility, seamless reservation integration, and a responsive layout tailored for both desktop and mobile guests.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/lepalace-image.PNG",
+      liveUrl: "https://le-palacemarrakech.com/",
+      githubUrl: "https://github.com/Youssef97dev/lepalace-v9",
       featured: true,
-      category: "Backend / API"
+      category: "Frontend",
     },
     {
-      id: "workforce-ops-portal",
-      title: "OpsTeam — Gestion RH & Chantiers",
+      id: "casalalla-restaurant",
+      title: "Casa Lalla Takerkoust - Restaurant",
       description:
-        "Portail de gestion des plannings de chantiers, présence des ouvriers, gestion des congés et coffre-fort numérique sécurisé.",
+        "A sunlit, editorial-style web application for a lakeside dining destination near Marrakech.",
       longDescription:
-        "Plateforme RH terrain avec interface mobile-first pour conducteurs de travaux, validation des congés en un clic et export comptable automatisé.",
-      techStack: ["React", "Node.js", "Express", "MongoDB", "REST API"],
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://opsteam-demo.vercel.app",
-      githubUrl: "https://github.com/youssefmoussafi/opsteam-manager",
-      featured: false,
-      category: "Full-Stack"
-    },
-    {
-      id: "ai-content-workflow",
-      title: "SynapseAI — Copilote de Génération Web",
-      description:
-        "Outil de génération assistée par IA pour la rédaction de fiches produits, méta-tags SEO automatisés et traduction contextuelle multilingue.",
-      longDescription:
-        "Intégration d'APIs LLM avec streaming en temps réel, orchestration de prompts et indexation vectorielle pour des résultats ultra-pertinents.",
-      techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "OpenAI API", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://synapseai-preview.vercel.app",
-      githubUrl: "https://github.com/youssefmoussafi/synapse-ai-copilot",
+        "Built the web presence for Casa Lalla Takerkoust using Next.js, React, and Node.js. The interface highlights the serene lakeside setting and Atlas Mountain views through clean layouts, fluid navigation, and optimized image loading. Engineered for performance and conversion, the platform streamlines event inquiries, menu discovery, and table bookings across all devices.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/casalalla-image.PNG",
+      liveUrl: "https://casalallatakerkoust.com/",
+      githubUrl: "https://github.com/Youssef97dev/casalallatakerkoustv2",
       featured: true,
-      category: "Mobile / AI"
+      category: "Frontend",
     },
     {
-      id: "modern-showcase-collection",
-      title: "Showcase Studio — 5 Vitrines Hautes Performances",
+      id: "purehouse-marrakech-riad",
+      title: "Pure House Marrakech - Riad",
       description:
-        "Suite de 5 sites vitrines sur-mesure pour des enseignes d'hospitality avec micro-animations 60fps et scores SEO Google 100/100.",
+        "A minimalist boutique riad website showcasing Moroccan craftsmanship and direct room booking.",
       longDescription:
-        "Développement de landing pages ultra-légeres avec rendu serveur Next.js, images optimisées et taux de rebond divisé par deux.",
-      techStack: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO Technique"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-      liveUrl: "https://showcase-studios.vercel.app",
-      githubUrl: "https://github.com/youssefmoussafi/showcase-sites",
-      featured: false,
-      category: "Frontend"
-    }
-  ]
+        "Created a modern hospitality website for Pure House Marrakech, a boutique riad in the heart of the Medina. Powered by Next.js and React, the site balances warm, minimalist aesthetics with fast client-side navigation and server-side SEO. It guides travelers effortlessly through room galleries, curated local experiences, and direct booking pathways.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/riad-image.PNG",
+      liveUrl: "https://purehousemarrakech.com/",
+      githubUrl: "https://github.com/Youssef97dev/purehousemedina",
+      featured: true,
+      category: "Frontend",
+    },
+    {
+      id: "purehouse-on-the-lake-hotel",
+      title: "Pure House On The Lake - Hotel",
+      description:
+        "An immersive hotel platform designed for a tranquil waterfront retreat at Lalla Takerkoust.",
+      longDescription:
+        "Developed the web application for Pure House On The Lake using Next.js, React, and Node.js. The design emphasizes calm, spacious layouts and rich photography to showcase the lakefront suites, pool, and dining experiences. Built with performance best practices, responsive grids, and clear booking calls-to-action to maximize direct reservations.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/lake-image.PNG",
+      liveUrl: "https://purehouseonthelake.com/",
+      githubUrl: "https://github.com/Youssef97dev/purehouseonthelake",
+      featured: true,
+      category: "Frontend",
+    },
+    {
+      id: "pure-farm-house-rural-hotel",
+      title: "Pure Farm House - Rural Hotel",
+      description:
+        "A nature-focused hospitality website for a peaceful countryside getaway outside Marrakech.",
+      longDescription:
+        "Built the digital platform for Pure Farm House, a rural boutique hotel celebrating slow living and nature. Utilizing Next.js, React, and Node.js, the site delivers fast load speeds, responsive layouts, and an earthy visual hierarchy that highlights the property's accommodations, farm-to-table dining, and outdoor experiences while keeping the booking journey simple and direct.",
+      techStack: ["ReactJS", "NodeJS", "NextJS"],
+      image: "/images/farm-image.PNG",
+      liveUrl: "https://purefarmhouse.com/",
+      githubUrl: "https://github.com/Youssef97dev/purefarmhouse",
+      featured: true,
+      category: "Frontend",
+    },
+  ],
 };
