@@ -60,7 +60,6 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <Analytics />
       <body className="min-h-full flex flex-col font-sans bg-(--background) text-(--foreground) bg-grid-dots">
         <ThemeProvider
           attribute="class"
@@ -68,6 +67,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={false}
         >
+          <Analytics />
           {children}
         </ThemeProvider>
       </body>
