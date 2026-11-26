@@ -372,6 +372,20 @@ export const portfolioData: PortfolioData = {
   // -------------------------------------------------------------------------------------------------
   projects: [
     {
+      id: "darly-reservation-saas",
+      title: "Darly - Modern Hospitality & Reservation Saas",
+      description:
+        "A full-stack SaaS platform that helps hospitality businesses manage reservations, availability, and guests from one clean dashboard.",
+      longDescription:
+        "Darly is a modern hospitality and reservation SaaS built for hotels, guesthouses, and rental properties that want to replace scattered spreadsheets and messages with a single, reliable system. The platform gives property owners a central dashboard to manage bookings, track availability, and keep an organized view of their guests and activity. The front end is built with Next.js and React for a fast, responsive experience, while the back end runs on Node.js and Express with a PostgreSQL database to keep reservation data consistent and structured. Designed with a multi-user SaaS approach in mind, Darly focuses on clarity, speed, and a smooth day-to-day workflow for hospitality teams.",
+      techStack: ["ReactJS", "NodeJS", "NextJS", "ExpressJS", "PostgreSQL"],
+      image: "/images/darly-image.PNG",
+      liveUrl: "https://darly-gamma.vercel.app/dashboard",
+      githubUrl: "https://github.com/Youssef97dev/darly",
+      featured: true,
+      category: "Full-Stack",
+    },
+    {
       id: "votresalles-platform",
       title: "VotreSalle.ma — Réservation de Salles",
       description:
